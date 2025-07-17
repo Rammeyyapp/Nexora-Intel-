@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIP & Lumpsum Calculator - Nexora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+     body {
+      background-color: #0a192f;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header img.logo {
+      height: 40px;
+    }
+
+    nav a {
+      color: #64ffda;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+    .subscribe-section {
+      background-color: #112240;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 4rem;
+      border-radius: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .subscribe-section h2 {
+      color: #64ffda;
+    }
+
+    .subscribe-section input {
+      padding: 0.6rem;
+      width: 250px;
+      border-radius: 6px;
+      border: none;
+      margin-right: 10px;
+      outline: none;
+    }
+
+    .subscribe-section button {
+      padding: 0.6rem 1.2rem;
+      background: #64ffda;
+      color: #0a192f;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #sub-msg {
+      margin-top: 1rem;
+      color: #64ffda;
+    }
+    .subscribe-section {
+  background: linear-gradient(135deg, #0a192f, #112240);
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-container {
+  background: #0a192f;
+  border: 2px solid #64ffda;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.15);
+  text-align: center;
+}
+
+.subscribe-container h2 {
+  color: #64ffda;
+  margin-bottom: 0.5rem;
+}
+
+.subscribe-container .highlight {
+  color: #00bfff;
+}
+
+.subscribe-container p {
+  color: #d3f8ff;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 0.75rem 1rem;
+  width: 250px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: inset 0 0 3px #00bfff;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.subscribe-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #64ffda;
+  color: #0a192f;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #00bfff;
+  transform: scale(1.05);
+}
+
+.sub-msg {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #64ffda;
+}
+.nexora-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  background-color: #0a192f;
+  height: 30px;
+  box-shadow: 0 1px 8px rgba(100, 255, 218, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nexora-header .logo {
+    padding-left: 0%;
+  height: 35px;
+}
+
+.nexora-header nav a {
+  color: #64ffda;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nexora-header nav a:hover {
+  color: white;
+}
+ .calculator-wrapper {
+      max-width: 700px;
+      margin: 4rem auto;
+      background: #112240;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #64ffda;
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #64ffda;
+      color: #0a192f;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #1de9b6;
+    }
+
+    .chat-box {
+      background-color: #0a192f;
+      padding: 1.2rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+    }
+
+    .chat-msg {
+      margin-bottom: 1rem;
+      background: #203a43;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      color: #64ffda;
+      line-height: 1.6;
+    }
+
+    .chat-msg span {
+      color: #fff;
+      font-weight: 600;
+    }
+    </style>
+ <header class="nexora-header">
+  <img src="../assets/logo.png" alt="Nexora Logo" class="logo" />
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../blog.html">Blog</a>
+    <a href="../sip-calculator.html">SIP Calculator</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+
+  <div class="calculator-wrapper">
+    <h1>📈 Nexora SIP & Lumpsum Calculator</h1>
+
+    <label for="type">Investment Type</label>
+    <select id="type">
+      <option value="sip">SIP</option>
+      <option value="lumpsum">Lumpsum</option>
+    </select>
+
+    <label for="amount">Investment Amount (₹)</label>
+    <input type="number" id="amount" placeholder="Ex: 5000" required />
+
+    <label for="rate">Expected Annual Return (%)</label>
+    <input type="number" id="rate" placeholder="Ex: 12" required />
+
+    <label for="years">Duration (Years)</label>
+    <input type="number" id="years" placeholder="Ex: 10" required />
+
+    <button onclick="calculate()">💹 Calculate Growth</button>
+
+    <div class="chat-box" id="chat-output"></div>
+
+    <canvas id="growthChart" width="400" height="200"></canvas>
+  </div>
+
+  <!-- 🔧 JS Logic -->
+  <script>
+    let chart;
+
+    function calculate() {
+      const type = document.getElementById('type').value;
+      const amount = parseFloat(document.getElementById('amount').value);
+      const rate = parseFloat(document.getElementById('rate').value);
+      const years = parseFloat(document.getElementById('years').value);
+      const chatBox = document.getElementById('chat-output');
+      const r = rate / 100;
+
+      let futureValue = 0, invested = 0, gain = 0;
+      let labels = [], data = [], investedData = [];
+
+      if (type === 'sip') {
+        const months = years * 12;
+        const monthlyRate = r / 12;
+        for (let i = 1; i <= months; i++) {
+          const fv = amount * (((Math.pow(1 + monthlyRate, i)) - 1) * (1 + monthlyRate)) / monthlyRate;
+          labels.push(`M${i}`);
+          data.push(fv);
+          investedData.push(amount * i);
+        }
+        futureValue = data[data.length - 1];
+        invested = amount * months;
+
+      } else {
+        for (let i = 1; i <= years; i++) {
+          const fv = amount * Math.pow(1 + r, i);
+          labels.push(`Y${i}`);
+          data.push(fv);
+          investedData.push(amount);
+        }
+        futureValue = data[data.length - 1];
+        invested = amount;
+      }
+
+      gain = futureValue - invested;
+
+      chatBox.innerHTML = `
+        <div class="chat-msg">📤 You chose: <span>${type.toUpperCase()}</span></div>
+        <div class="chat-msg">💰 Total Invested: <span>₹${invested.toFixed(2)}</span></div>
+        <div class="chat-msg">📊 Expected Value: <span>₹${futureValue.toFixed(2)}</span></div>
+        <div class="chat-msg">📈 Total Growth: <span>₹${gain.toFixed(2)}</span></div>
+      `;
+
+      // Chart.js setup
+      const ctx = document.getElementById('growthChart').getContext('2d');
+      if (chart) chart.destroy(); // reset
+
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Wealth Value (₹)',
+              data: data,
+              borderColor: '#64ffda',
+              backgroundColor: 'rgba(100, 255, 218, 0.2)',
+              tension: 0.3,
+              fill: true
+            },
+            {
+              label: 'Invested Amount (₹)',
+              data: investedData,
+              borderColor: '#ff6f91',
+              backgroundColor: 'rgba(255, 111, 145, 0.2)',
+              borderDash: [5, 5],
+              tension: 0.3,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              ticks: {
+                color: '#ffffff'
+              }
+            },
+            x: {
+              ticks: {
+                color: '#ffffff'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: '#ffffff'
+              }
+            }
+          }
+        }
+      });
+    }
+  </script>
+  <section class="subscribe-section">
+  <div class="subscribe-container">
+    <h2>📬 Subscribe to <span class="highlight">Nexora Insights</span></h2>
+    <p>Stay ahead with AI tools, market trends, and exclusive blogs — delivered to your inbox 📈</p>
+
+    <form id="subscribe-form" class="subscribe-form">
+      <input type="email" id="subscriberEmail" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <p id="sub-msg" class="sub-msg"></p>
+  </div>
+</section>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("subscriberEmail").value;
+      const message = document.getElementById("sub-msg");
+
+      fetch("https://script.google.com/macros/s/AKfycbySXMvkRT_iJQ3x1hHU7WkYyp8nMcvS7-iujS2urTJ4Dj57qESmR1W0jW4-gkhNL6kt/exec", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(() => {
+        message.innerText = "Subscribed successfully! 🎉";
+        document.getElementById("subscriberEmail").value = "";
+      })
+      .catch(() => {
+        message.innerText = "Failed to subscribe. Try again later.";
+      });
+    });
+  </script>
+  </body>
+</html>

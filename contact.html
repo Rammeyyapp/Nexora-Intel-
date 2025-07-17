@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Nexora Intel</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a192f;
+      color: #eee;
+    }
+
+    .nexora-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 1.2rem;
+      background-color: #0a192f;
+      height: 60px;
+      box-shadow: 0 1px 8px rgba(100, 255, 218, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nexora-header .logo {
+      height: 32px;
+    }
+
+    .nexora-header nav a {
+      color: #64ffda;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .nexora-header nav a:hover {
+      color: white;
+    }
+
+    .contact-section {
+      padding: 3rem 2rem 1rem;
+    }
+
+    .contact-section h1 {
+      color: #64ffda;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .contact-info p {
+      margin: 1rem 0;
+      font-size: 1rem;
+    }
+
+    .contact-info button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #64ffda;
+      border: none;
+      color: #0a192f;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-map {
+      flex: 1;
+      min-width: 300px;
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.1);
+    }
+
+    .subscribe-section {
+      background: linear-gradient(135deg, #0a192f, #112240);
+      padding: 3rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .subscribe-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #0a192f;
+      border: 2px solid #64ffda;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+
+    .subscribe-section h2 {
+      color: #64ffda;
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-section p {
+      margin: 0.5rem 0 1.5rem;
+      color: #eee;
+    }
+
+    .subscribe-form input {
+      padding: 0.6rem;
+      width: 250px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .subscribe-form button {
+      padding: 0.6rem 1.2rem;
+      background: #64ffda;
+      color: #0a192f;
+      border: none;
+      border-radius: 6px;
+      margin-left: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .subscribe-form button:hover {
+      background-color: #00e6c0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #06121f;
+      color: #ccc;
+      margin-top: 0;
+    }
+
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="nexora-header">
+  <img src="assets/logo.png" alt="Nexora Logo" class="logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="../sip-calculator.html">SIP Calculator</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <h1>Contact Nexora Intel</h1>
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <p><strong>📞 Phone:</strong> 9994399207</p>
+      <p><strong>📧 Email:</strong> NexoraIntel.official@outlook.com
+        <br><a href="mailto:NexoraIntel.official@outlook.com">
+          <button>Email Us</button>
+        </a>
+      </p>
+      <p><strong>📸 Instagram:</strong> @nexora_intel</p>
+      <p><strong>📍 Location:</strong> Vandiyur Bus Stand, Madurai</p>
+    </div>
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps?q=Vandiyur+Bus+Stand,+Madurai,+Tamil+Nadu&output=embed"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Subscription Box Integrated -->
+  <section class="subscribe-section">
+    <div class="subscribe-container">
+      <h2>📬 Subscribe to <span class="highlight">Nexora Insights</span></h2>
+      <p>Get the latest mutual fund updates, AI tools, and investing blogs straight to your inbox.</p>
+      <form id="subscribe-form" class="subscribe-form">
+        <input type="email" id="subscriberEmail" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="sub-msg"></p>
+    </div>
+  </section>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Nexora Intel | MSME Verified | All Rights Reserved</p>
+</footer>
+
+<!-- Subscription Script -->
+<script>
+  document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = document.getElementById("subscriberEmail").value;
+    const message = document.getElementById("sub-msg");
+
+    fetch("https://script.google.com/macros/s/AKfycbySXMvkRT_iJQ3x1hHU7WkYyp8nMcvS7-iujS2urTJ4Dj57qESmR1W0jW4-gkhNL6kt/exec", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+      headers: { "Content-Type": "application/json" }
+    })
+    .then(() => {
+      message.innerText = "Subscribed successfully! 🎉";
+      document.getElementById("subscriberEmail").value = "";
+    })
+    .catch(() => {
+      message.innerText = "Failed to subscribe. Try again later.";
+    });
+  });
+</script>
+<script src="js/uiEffects.js"></script>
+
+</body>
+</html>
