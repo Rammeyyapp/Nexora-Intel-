@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIP vs Lumpsum | Nexora Intel</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a192f;
+      color: #eee;
+    }
+
+    .nexora-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 1.2rem;
+      background-color: #0a192f;
+      height: 60px;
+      box-shadow: 0 1px 8px rgba(100, 255, 218, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nexora-header .logo {
+      height: 32px;
+    }
+
+    .nexora-header nav a {
+      color: #64ffda;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .nexora-header nav a:hover {
+      color: white;
+    }
+
+    .blog-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      align-items: flex-start;
+    }
+
+    .blog-content {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .blog-content h1 {
+      color: #64ffda;
+      margin-bottom: 1rem;
+    }
+
+    .blog-content h3, .blog-content h4 {
+      color: #00e6e6;
+    }
+
+    .blog-image {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blog-image img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .subscribe-section {
+      background: linear-gradient(135deg, #0a192f, #112240);
+      padding: 3rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .subscribe-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #0a192f;
+      border: 2px solid #64ffda;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+
+    .subscribe-section h2 {
+      color: #64ffda;
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-section p {
+      margin: 0.5rem 0 1.5rem;
+      color: #eee;
+    }
+
+    .subscribe-form input {
+      padding: 0.6rem;
+      width: 250px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .subscribe-form button {
+      padding: 0.6rem 1.2rem;
+      background: #64ffda;
+      color: #0a192f;
+      border: none;
+      border-radius: 6px;
+      margin-left: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .subscribe-form button:hover {
+      background-color: #00bfa5;
+    }
+
+    #sub-msg {
+      margin-top: 1rem;
+      color: #64ffda;
+    }
+
+    @media (max-width: 768px) {
+      .blog-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .blog-image {
+        order: -1;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="nexora-header">
+    <img src="../assets/logo.png" alt="Nexora Logo" class="logo" />
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <div class="blog-content">
+      <h1>SIP vs Lumpsum – Which Investment Style Suits You?</h1>
+      <p>Choosing between a <strong>SIP (Systematic Investment Plan)</strong> and a <strong>Lumpsum Investment</strong> can make a big difference in your wealth-building strategy. Here’s how to pick the best one for your financial journey:</p>
+
+      <h3>📅 What is SIP?</h3>
+      <p>SIP lets you invest a fixed amount at regular intervals (e.g., monthly). It’s great for salaried individuals or those who prefer structured investing.</p>
+
+      <h4>✅ Benefits of SIP:</h4>
+      <ul>
+        <li>Reduces market timing stress</li>
+        <li>Utilizes rupee cost averaging</li>
+        <li>Builds investment habit and discipline</li>
+        <li>Lower entry barrier (start with ₹500/month)</li>
+      </ul>
+
+      <h3>💰 What is Lumpsum?</h3>
+      <p>Lumpsum involves investing a large amount in one go — ideal when you receive a bonus, inheritance, or already have parked capital.</p>
+
+      <h4>✅ Best suited when:</h4>
+      <ul>
+        <li>You spot market dips or corrections</li>
+        <li>You want to invest idle funds</li>
+        <li>You have a long-term horizon (5+ years)</li>
+      </ul>
+
+      <h3>🤝 Nexora Recommends:</h3>
+      <p>For most investors, a blended strategy works best. Combine SIPs for consistency with lumpsum during opportunities. Always align with your goal, horizon, and risk appetite.</p>
+    </div>
+
+    <div class="blog-image">
+      <img src="../assets/images/sip-vs-lumpsum.jpeg" alt="SIP vs Lumpsum Illustration" />
+    </div>
+  </section>
+
+  <!-- Subscription Box -->
+  <section class="subscribe-section">
+    <div class="subscribe-container">
+      <h2>📬 Subscribe to <span class="highlight">Nexora Insights</span></h2>
+      <p>Stay updated with expert investing blogs, AI-based tools, and smart fund picks — delivered weekly to your inbox.</p>
+      <form id="subscribe-form" class="subscribe-form">
+        <input type="email" id="subscriberEmail" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="sub-msg"></p>
+    </div>
+  </section>
+
+  <!-- Subscription Script -->
+  <script>
+    document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("subscriberEmail").value;
+      const message = document.getElementById("sub-msg");
+
+      fetch("https://script.google.com/macros/s/AKfycbySXMvkRT_iJQ3x1hHU7WkYyp8nMcvS7-iujS2urTJ4Dj57qESmR1W0jW4-gkhNL6kt/exec", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: { "Content-Type": "application/json" }
+      })
+      .then(() => {
+        message.innerText = "Subscribed successfully! 🎉";
+        document.getElementById("subscriberEmail").value = "";
+      })
+      .catch(() => {
+        message.innerText = "Failed to subscribe. Try again later.";
+      });
+    });
+  </script>
+
+</body>
+</html>
